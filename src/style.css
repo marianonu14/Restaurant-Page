@@ -1,3 +1,64 @@
-body{
-    background-color: red;
+:root{
+    --fuente-principal: 'Lato', sans-serif;
+    --color-primario: #538084;
+    --color-secundario: #99C4C8;
+    --color-terciario: #E5CB9F;
+    --color-cuaternario: #bcd0bc;
+}
+
+html {
+    font-size: 62.5%; /* 1 rem = 10 px */
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-principal);
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: var(--color-cuaternario);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    padding: 1rem 5rem;
+    background-color: var(--color-primario);
+}
+
+.logo-container img{
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    max-width: 30rem;
+    height: auto;
+}
+
+.btn-container {
+    min-width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+    font-size: 2rem;
+}
+
+.btn:hover {
+    color: var(--color-cuaternario);
+}
+
+.active {
+    color: var(--color-cuaternario);
 }
