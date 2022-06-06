@@ -1,4 +1,9 @@
+import Home from './pages/Home'
+import About from './pages/About'
+import Menu from './pages/Menu'
+import reset from './functions/reset'
 import './style.css';
+import './pages.css';
 import logoImage from './img/logo.jpg'
 
 //Main Container
@@ -38,23 +43,31 @@ btnContainer.appendChild(btnMenu);
 btnContainer.appendChild(btnAbout);
 
 btnHome.addEventListener('click', () => {
-    console.log("btnHome");
-    btnHome.className = "btn active";
+    reset();
+    Home();
+    btnActive(btnHome);
 });
 
 btnMenu.addEventListener('click', () => {
-    console.log("btnMenu");
+    reset();
+    Menu();
+    btnActive(btnMenu);
 });
 
 btnAbout.addEventListener('click', () => {
-    console.log("btnAbout");
+    reset();
+    About();
+    btnActive(btnAbout);
 });
+
+function btnActive(btn) {
+    btnHome.className = "btn";
+    btnMenu.className = "btn";
+    btnAbout.className = "btn";
+    btn.className = "btn active";
+}
 
 navbar.appendChild(logoContainer);
 navbar.appendChild(btnContainer);
-
 content.appendChild(navbar);
-
-
-
 
